@@ -22,6 +22,5 @@ class ReviewsSpider(scrapy.Spider):
         if next_page is not None:
             url = response.urljoin(next_page[0].extract())
             yield scrapy.Request(url, self.parse)
-            #next_page = response.urljoin(next_page)
-            #yield scrapy.Request(next_page, callback=self.parse)
+     
        
